@@ -1,8 +1,16 @@
+import Container from "./components/Container";
+import TutorialCard from "./components/TutorialCard";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Container>
+      <TutorialCard />
+      <TutorialCard />
+      <TutorialCard />
+      <TutorialCard />
+      <TutorialCard />
+      <TutorialCard />
+    </Container>
   );
 }
 
