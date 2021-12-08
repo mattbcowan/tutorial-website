@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
 
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
   }
 
   // Extra large devices (large desktops, 1200px and up)

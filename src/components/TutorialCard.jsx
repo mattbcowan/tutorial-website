@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { AiOutlineVideoCamera } from "react-icons/ai";
-import { BsFillPlayFill } from "react-icons/bs";
 
 const Container = styled.div`
   position: relative;
+  margin: 1rem;
 `;
 
 const BackgroundContainer = styled.div`
@@ -19,7 +19,6 @@ const BackgroundContainer = styled.div`
   align-items: flex-end;
   transform-origin: bottom right;
   transition: all 250ms ease;
-  /* background-image: url("./shader.svg"); */
 `;
 
 const CardContainer = styled.div`
@@ -64,9 +63,10 @@ const CardWrapper = styled.div`
   box-sizing: inherit;
 `;
 
-const CardHeader = styled.div`
+const CardSection = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const HeaderSection = styled.div`
@@ -92,13 +92,28 @@ const MediaIcon = styled.span`
   font-size: 2rem;
 `;
 
+const Avatar = styled.div`
+  display: flex;
+  align-items: center;
+
+  span {
+    text-align: right;
+  }
+`;
+
+const AvatarImg = styled.img`
+  border-radius: 48px;
+  overflow: hidden;
+  margin-left: 0.5rem;
+`;
+
 const TutorialCard = () => {
   return (
     <Container>
       <CardContainer>
         <CardContent>
           <CardWrapper>
-            <CardHeader>
+            <CardSection>
               <HeaderSection>
                 <MediaIcon>
                   <AiOutlineVideoCamera />
@@ -108,8 +123,14 @@ const TutorialCard = () => {
               <HeaderSection>
                 <span>Beginner</span>
               </HeaderSection>
-            </CardHeader>
-            <div>How to Clean Shoes</div>
+            </CardSection>
+            <CardSection>
+              <div>How to Clean Shoes</div>
+              <Avatar>
+                <span>Michelle Johnson</span>
+                <AvatarImg src="https://via.placeholder.com/48" alt="Avatar" />
+              </Avatar>
+            </CardSection>
           </CardWrapper>
         </CardContent>
         <CardBackground
@@ -119,7 +140,7 @@ const TutorialCard = () => {
         />
       </CardContainer>
       <BackgroundContainer>
-        <span>Get Started</span>
+        <span>Start Me!</span>
       </BackgroundContainer>
     </Container>
   );
