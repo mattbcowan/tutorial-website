@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { AiOutlineVideoCamera, AiOutlineFileText } from "react-icons/ai";
 
 const CardContainer = styled.div`
   aspect-ratio: 6/4;
@@ -18,6 +19,7 @@ const CardContent = styled.div`
   position: relative;
   display: block;
   box-sizing: inherit;
+  z-index: 2;
 `;
 
 const CardWrapper = styled.div`
@@ -39,6 +41,23 @@ const HeaderSection = styled.div`
   flex-direction: column;
 `;
 
+const CardBackground = styled.div`
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  background-position: 100% center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+`;
+
+const MediaIcon = styled.span`
+  font-size: 2rem;
+`;
+
 const TutorialCard = () => {
   return (
     <CardContainer>
@@ -46,16 +65,23 @@ const TutorialCard = () => {
         <CardWrapper>
           <CardHeader>
             <HeaderSection>
+              <MediaIcon>
+                <AiOutlineVideoCamera />
+              </MediaIcon>
               <span>4 Parts</span>
-              <span>Text</span>
             </HeaderSection>
             <HeaderSection>
               <span>Beginner</span>
             </HeaderSection>
           </CardHeader>
-          <div>Bottom Content</div>
+          <div>How to Clean Shoes</div>
         </CardWrapper>
       </CardContent>
+      <CardBackground
+        img={
+          "https://images.unsplash.com/photo-1638984498411-345388047a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+        }
+      />
     </CardContainer>
   );
 };
