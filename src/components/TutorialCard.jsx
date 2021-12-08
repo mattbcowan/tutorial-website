@@ -23,20 +23,29 @@ const CardContent = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   flex-flow: column;
-  padding: 1.5rem;
+  padding: 0.75rem;
   height: inherit;
   justify-content: space-between;
   box-sizing: inherit;
 `;
 
-const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
+const CardImgContainer = styled.div`
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-position: top;
+  background-size: cover;
 `;
 
-const HeaderSection = styled.div`
+const CardImg = styled.img`
+  width: 100%;
+`;
+
+const CardFooter = styled.div`
+  height: 20%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 `;
 
 const TutorialCard = () => {
@@ -44,16 +53,15 @@ const TutorialCard = () => {
     <CardContainer>
       <CardContent>
         <CardWrapper>
-          <CardHeader>
-            <HeaderSection>
-              <span>4 Parts</span>
-              <span>Text</span>
-            </HeaderSection>
-            <HeaderSection>
-              <span>Beginner</span>
-            </HeaderSection>
-          </CardHeader>
-          <div>Bottom Content</div>
+          <CardImgContainer>
+            <CardImg
+              src="https://images.unsplash.com/photo-1638864031355-ae1bf0f3717e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+              alt="A burger"
+            />
+          </CardImgContainer>
+          <CardFooter>
+            <div>Bottom Content</div>
+          </CardFooter>
         </CardWrapper>
       </CardContent>
     </CardContainer>
