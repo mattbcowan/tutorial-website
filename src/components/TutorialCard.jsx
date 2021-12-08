@@ -1,16 +1,49 @@
 import styled from "styled-components";
-import { AiOutlineVideoCamera, AiOutlineFileText } from "react-icons/ai";
+import { AiOutlineVideoCamera } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
+
+const Container = styled.div`
+  position: relative;
+`;
+
+const BackgroundContainer = styled.div`
+  aspect-ratio: 6/4;
+  width: 90%;
+  border-radius: 1rem;
+  background-color: #ff765e;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  align-items: flex-end;
+  transform-origin: bottom right;
+  transition: all 250ms ease;
+  /* background-image: url("./shader.svg"); */
+`;
 
 const CardContainer = styled.div`
   aspect-ratio: 6/4;
   width: 100%;
   border-radius: 1rem;
-  background-color: purple;
+  background-color: #000;
   color: #fff;
   background-size: cover;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  cursor: pointer;
+  transform-origin: bottom right;
+  transition: all 250ms ease;
+  z-index: 2;
+  &:hover {
+    transform: rotate(5deg);
+    box-shadow: -10px 10px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover + ${BackgroundContainer} {
+    transform: rotate(-5deg);
+  }
 `;
 
 const CardContent = styled.div`
@@ -52,6 +85,7 @@ const CardBackground = styled.div`
   top: 0;
   left: 0;
   z-index: 1;
+  opacity: 0.7;
 `;
 
 const MediaIcon = styled.span`
@@ -60,29 +94,34 @@ const MediaIcon = styled.span`
 
 const TutorialCard = () => {
   return (
-    <CardContainer>
-      <CardContent>
-        <CardWrapper>
-          <CardHeader>
-            <HeaderSection>
-              <MediaIcon>
-                <AiOutlineVideoCamera />
-              </MediaIcon>
-              <span>4 Parts</span>
-            </HeaderSection>
-            <HeaderSection>
-              <span>Beginner</span>
-            </HeaderSection>
-          </CardHeader>
-          <div>How to Clean Shoes</div>
-        </CardWrapper>
-      </CardContent>
-      <CardBackground
-        img={
-          "https://images.unsplash.com/photo-1638984498411-345388047a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
-        }
-      />
-    </CardContainer>
+    <Container>
+      <CardContainer>
+        <CardContent>
+          <CardWrapper>
+            <CardHeader>
+              <HeaderSection>
+                <MediaIcon>
+                  <AiOutlineVideoCamera />
+                </MediaIcon>
+                <span>4 Parts</span>
+              </HeaderSection>
+              <HeaderSection>
+                <span>Beginner</span>
+              </HeaderSection>
+            </CardHeader>
+            <div>How to Clean Shoes</div>
+          </CardWrapper>
+        </CardContent>
+        <CardBackground
+          img={
+            "https://images.unsplash.com/photo-1638984498411-345388047a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+          }
+        />
+      </CardContainer>
+      <BackgroundContainer>
+        <span>Get Started</span>
+      </BackgroundContainer>
+    </Container>
   );
 };
 
