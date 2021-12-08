@@ -6,13 +6,14 @@ const StyledContainer = styled.div`
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  background-color: ${(props) => props.backgroundColor}
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
 
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
   }
 
   // Medium devices (tablets, 768px and up)
@@ -30,8 +31,12 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Container = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+const Container = ({ children, backgroundColor }) => {
+  return (
+    <StyledContainer backgroundColor={backgroundColor}>
+      {children}
+    </StyledContainer>
+  );
 };
 
 export default Container;

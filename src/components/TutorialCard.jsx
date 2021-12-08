@@ -10,7 +10,7 @@ const BackgroundContainer = styled.div`
   aspect-ratio: 6/4;
   width: 90%;
   border-radius: 1rem;
-  background-color: #ff765e;
+  background-color: #ff8f7b;
   position: relative;
   z-index: 1;
   display: flex;
@@ -72,6 +72,7 @@ const CardSection = styled.div`
 const HeaderSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const CardBackground = styled.div`
