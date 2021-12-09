@@ -3,7 +3,7 @@ import TutorialCard from "./components/TutorialCard";
 
 function App() {
   return (
-    <Container backgroundColor="#2e2e2e;">
+    <Container>
       <TutorialCard />
       <TutorialCard />
       <TutorialCard />

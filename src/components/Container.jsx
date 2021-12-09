@@ -10,10 +10,8 @@ const StyledContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding: 2rem 1rem;
-  background-color: ${(props) => props.backgroundColor}
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) {
-
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
   }
 
   // Medium devices (tablets, 768px and up)
@@ -32,11 +30,7 @@ const StyledContainer = styled.div`
 `;
 
 const Container = ({ children, backgroundColor }) => {
-  return (
-    <StyledContainer backgroundColor={backgroundColor}>
-      {children}
-    </StyledContainer>
-  );
+  return <StyledContainer>{children}</StyledContainer>;
 };
 
 export default Container;
