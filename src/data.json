@@ -1,0 +1,38 @@
+[
+  {
+    "title": "How to Clean Shoes",
+    "author": "Michelle Johnson",
+    "image": "https://images.unsplash.com/photo-1638984498411-345388047a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
+    "parts": 4,
+    "skillLevel": "Beginner",
+    "icon": "video",
+    "backgroundColor": "#0984e3"
+  },
+  {
+    "title": "Web Design for Dummies",
+    "author": "John Doe",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    "parts": 12,
+    "skillLevel": "Beginner",
+    "icon": "video",
+    "backgroundColor": "#ff8f7b"
+  },
+  {
+    "title": "Yoga 101",
+    "author": "Jane Doe",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80",
+    "parts": 7,
+    "skillLevel": "Beginner",
+    "icon": "video",
+    "backgroundColor": "#6c5ce7"
+  },
+  {
+    "title": "How to Write Copy",
+    "author": "The Copywriters Project",
+    "image": "https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80",
+    "parts": 14,
+    "skillLevel": "Intermediate",
+    "icon": "text",
+    "backgroundColor": "#d63031"
+  }
+]

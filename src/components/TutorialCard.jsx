@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiOutlineVideoCamera } from "react-icons/ai";
+import { AiOutlineVideoCamera, AiOutlineFileText } from "react-icons/ai";
 
 const Container = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ const BackgroundContainer = styled.div`
   aspect-ratio: 6/4;
   width: 90%;
   border-radius: 1rem;
-  background-color: #ff8f7b;
+  background-color: ${(props) => props.backgroundColor};
   position: relative;
   z-index: 1;
   display: flex;
@@ -108,7 +108,15 @@ const AvatarImg = styled.img`
   margin-left: 0.5rem;
 `;
 
-const TutorialCard = () => {
+const TutorialCard = ({
+  title,
+  author,
+  image,
+  parts,
+  skillLevel,
+  icon,
+  backgroundColor,
+}) => {
   return (
     <Container>
       <CardContainer>
@@ -117,30 +125,30 @@ const TutorialCard = () => {
             <CardSection>
               <HeaderSection>
                 <MediaIcon>
-                  <AiOutlineVideoCamera />
+                  {icon === "text" ? (
+                    <AiOutlineVideoCamera />
+                  ) : (
+                    <AiOutlineFileText />
+                  )}
                 </MediaIcon>
-                <span>4 Parts</span>
+                <span>{parts} Parts</span>
               </HeaderSection>
               <HeaderSection>
-                <span>Beginner</span>
+                <span>{skillLevel}</span>
               </HeaderSection>
             </CardSection>
             <CardSection>
-              <div>How to Clean Shoes</div>
+              <div>{title}</div>
               <Avatar>
-                <span>Michelle Johnson</span>
+                <span>{author}</span>
                 <AvatarImg src="https://via.placeholder.com/48" alt="Avatar" />
               </Avatar>
             </CardSection>
           </CardWrapper>
         </CardContent>
-        <CardBackground
-          img={
-            "https://images.unsplash.com/photo-1638984498411-345388047a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
-          }
-        />
+        <CardBackground img={image} />
       </CardContainer>
-      <BackgroundContainer>
+      <BackgroundContainer backgroundColor={backgroundColor}>
         <span>Start Me!</span>
       </BackgroundContainer>
     </Container>
